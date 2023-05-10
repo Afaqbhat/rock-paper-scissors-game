@@ -1,0 +1,224 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height:100vh;
+    background: radial-gradient(
+        hsl(214, 47%, 23%),
+        hsl(214, 47%, 23%)
+    );
+    display: flex;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    width: 44rem;
+    height: 9.5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+    align-items: center;
+}
+
+.openModal {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background: transparent;
+    border: 1px solid hsl(217, 16%, 45%);
+    border-radius: 6px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    width: 11rem;
+    margin: 8px auto;
+    padding: 1rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: ease-out 300ms;
+  }
+  .openModal:hover {
+    background: hsl(228, 100%, 85%);
+    transition: ease-in 300ms;
+  }
+.scoreboard{
+    background-color: white;
+    border-radius: 6px;
+    height: 7.5rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+.score-title{
+    font-size: 1rem;
+    color: hsl(229, 64%, 46%);
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+}
+
+.score{
+    color: #565468;
+    font-size: 56px;
+}
+/* main-hands */
+
+.main-context{
+    height:29rem;
+    width:25rem ;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 45px;
+    background: url(./images/triangle.png) no-repeat center;
+
+}
+
+.hand img{
+    width: 150px;
+}
+
+.paper{
+    margin-right:22px ;
+}
+
+.scissors{
+    margin-left: 22px;
+}
+.rock{
+    position: absolute;
+    right: 30%;
+    top: 50%;
+}
+
+.hand{
+    cursor: pointer;
+    transition: all 0.30s ease;
+}
+
+.hand img:hover{
+    transform: translateY(-8px);
+}
+
+/* game-result-display */
+
+.secondary-context{
+    height: 30rem;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+
+.secondary-context h2{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-weight:lighter;
+}
+
+.referee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.referee h2{
+    font-size: 3rem;
+}
+
+.newGame{
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 8px;
+    color: hsl(229, 25%, 31%);
+    
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.30s ease;
+
+}
+
+.newGame:hover{
+    color: rgb(173, 17, 17);
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5rem;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: hsl(0, 0%, 0%);
+    background-color: hsla(0, 0%, 0%, 0.8);
+  }
+
+  /* Modal Content */
+  .modalContent {
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    margin: auto;
+    width: 100%;
+    max-width: 40rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 53%);
+    border-radius: 10px;
+    animation-name: animateshow;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  .modalContent img {
+    width: 450px;
+  }
+  /* The Close Modal Button */
+  .closeModal {
+    color: hsl(0, 0%, 67%);
+    float: right;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background: none;
+    border: none;
+  }
+  .closeModal:hover,
+  .closeModal:focus {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Modal Animation */
+  @keyframes animateshow {
+    from {
+      top: -50rem;
+    }
+  
+    to {
+      top: 0;
+    }
+  }
+
+
+  

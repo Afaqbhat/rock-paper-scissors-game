@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/rock-paper-scissors.png">
+  
+  <title>Rock,Paper&Scissors</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="header">
+      <div class="logo">
+        <img src="./images/logo.svg">
+      </div>
+      <div class="scoreboard">
+        <p class="score-title">SCORE</p>
+        <p class="score">0</p>
+      </div>
+    </div>
+
+    <button class="openModal">RULES</button>
+
+      <div class="main-context">
+        <div class="paper hand">
+          <img  src="./images/Paper.png" onclick="userPicked('Paper')">
+        </div>
+        <div class="scissors hand">
+          <img src="./images/Scissors.png" onclick="userPicked('Scissors')">
+        <div class="rock hand">
+          <img src="./images/Rock.png" onclick="userPicked('Rock')">
+        </div>
+        </div>
+      </div> 
+
+      <div class="secondary-context">
+        <div class="userhand">
+          <h2>You Picked</h2>
+          <div class="userHandImage">
+            <img id="userchoice" alt="user choice">
+          </div>
+        </div>
+        <div class="referee">
+          <div class="decision"><h2></h2></div>
+          <div class="newGame"><p>Play Again</p></div>
+        </div>
+        <div class="computerhand">
+          <h2>The Computer Picked</h2>
+          <div class="compHandImage">
+            <img id="computerchoice" alt="computer choice">
+          </div>
+        </div>
+      </div>
+      <div class="modal" aria-hidden="true" role="dialog">
+        <div class="modalContent">
+          <button class="closeModal">&times;</button>
+          <p><img src="images/image-rules.svg" alt="Game Rules" /></p>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
