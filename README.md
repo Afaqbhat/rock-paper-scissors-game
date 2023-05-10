@@ -4,6 +4,10 @@
 
 This is a simple implementation of the classic game "Rock, Paper, Scissors" using HTML, CSS, and JavaScript.The game can be played between the user and the computer.
 
+## Preview Game
+
+https://afaqbhat.github.io/rock-paper-scissors-game
+
 ## Game Rules
 
 - Rock beats scissors.
